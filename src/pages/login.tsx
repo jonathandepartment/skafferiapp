@@ -4,12 +4,7 @@ import LoginForm from "../components/LoginForm";
 import { AuthContext } from "../context/AuthContext";
 import { NotificationContext } from "../context/NotificationContext";
 
-const loginStyle = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  background: "green",
-};
+import "../assets/css/Login.css";
 
 type Props = {};
 
@@ -38,7 +33,7 @@ const Login = (props: Props) => {
   };
 
   return (
-    <div>
+    <div className="login-page">
       <h1>Login</h1>
       <LoginForm handleLogin={handleLogin} />
     </div>

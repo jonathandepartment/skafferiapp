@@ -6,6 +6,8 @@ import Routes from "./Routes";
 import { Alert } from "./components/Alert";
 import Navbar from "./components/Navbar";
 
+import "./App.css";
+
 function App() {
   return (
     <BrowserRouter>
