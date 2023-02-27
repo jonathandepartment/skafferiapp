@@ -24,7 +24,7 @@ impl Serialize for Product {
 
 fn main() {
   tauri::Builder::default()
-    .invoke_handler(tauri::generate_handler![get_items])
+    .invoke_handler(tauri::generate_handler![get_items, add_item])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 }
@@ -45,4 +45,14 @@ fn get_items() -> Vec<Product> {
   products.push(product_one);
   products.push(product_two);
   products
+}
+
+#[tauri::command]
+fn add_item(name: String, date: String) -> Product {  
+  let product_one = Product {
+    name,
+    date
+  };
+
+  product_one
 }
