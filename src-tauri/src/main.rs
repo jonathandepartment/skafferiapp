@@ -53,6 +53,6 @@ fn add_item(name: String, date: String) -> Product {
     name,
     date
   };
-
+  println!("product was added! {} : {}", product_one.name, product_one.date);
   product_one
 }
